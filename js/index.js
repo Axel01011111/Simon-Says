@@ -12,6 +12,7 @@ let started = false;
 function startOver() {
   level = 0;
   gamePattern = [];
+  userClickedPattern = [];
   started = false;
 }
 
