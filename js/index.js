@@ -59,7 +59,7 @@ function animatePress(currentColor) {
 
 //---GAME STARTS---//
 
-$(document).keydown(function() {
+$(".play").click(function() {
   if (!started) {
     nextSequence();
     started = true;
@@ -78,7 +78,7 @@ function checkAnswer(currentLevel) {
   } else {
     console.log("Wrong");
     playSound("wrong")
-    $("#level-title").html("Game Over<br><br>Press a key to restart");
+    $("#level-title").html("Game Over<br><br>Press play to restart");
     $("body").addClass("game-over")
     setTimeout(function() {
       $("body").removeClass("game-over")
