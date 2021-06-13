@@ -7,12 +7,6 @@ let level = 0;
 
 let started = false;
 
-
-function playColor(index){
-  playSound(gamePattern[index]);
-  $("#" + gamePattern[index]).fadeOut(100).fadeIn(100);
-}
-
 //Game Over
 function startOver() {
   level = 0;
@@ -28,10 +22,8 @@ function nextSequence() {
   let randomChosenColor = buttonColors[randomNum];
 
   gamePattern.push(randomChosenColor);
-  let i;
-  for (i = 0; i < gamePattern.length; i++) {
-    setTimeout(playColor(i), 750);   
-  }
+  playSound(gamePattern[index]);
+  $("#" + gamePattern[index]).fadeOut(100).fadeIn(100);
 
   //Change level
   level++;
