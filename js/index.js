@@ -25,8 +25,12 @@ function nextSequence() {
   gamePattern.push(randomChosenColor);
   let i;
   for (i = 0; i < gamePattern.length; i++) {
-    playSound(gamePattern[i]);
-    $("#" + gamePattern[i]).fadeOut(100).fadeIn(100);
+    setTimeout(function(){
+      playSound(gamePattern[i]);
+      $("#" + gamePattern[i]).fadeOut(100).fadeIn(100);
+    }, 750);
+    
+    
   }
 
   //Change level
