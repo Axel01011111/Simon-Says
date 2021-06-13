@@ -23,8 +23,11 @@ function nextSequence() {
   let randomChosenColor = buttonColors[randomNum];
 
   gamePattern.push(randomChosenColor);
-  playSound(randomChosenColor);
-  $("#" + randomChosenColor).fadeOut(100).fadeIn(100);
+  let i;
+  for (i = 0; i < gamePattern.length; i++) {
+    playSound(gamePattern[i]);
+    $("#" + gamePattern[i]).fadeOut(100).fadeIn(100);
+  }
 
   //Change level
   level++;
